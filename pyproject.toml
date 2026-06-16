@@ -1,0 +1,28 @@
+[project]
+name = "training"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "debugpy>=1.8.21",
+    "pytest>=9.1.0",
+    "ruff>=0.15.17",
+]
+
+[tool.ruff.lint]
+# Extend default rules (E, F) with additional strict categories
+extend-select = [
+    "B",      # flake8-bugbear
+    "C4",     # flake8-comprehensions
+    "RET",    # flake8-return
+    "SIM",    # flake8-simplify
+    "UP",     # pyupgrade
+    "ANN",    # flake8-annotations (optional, for strict typing)
+    "PTH",    # flake8-use-pathlib
+    "ARG",    # flake8-unused-arguments
+    "TCH",    # flake8-type-checking
+]
